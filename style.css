@@ -1,0 +1,11 @@
+button{
+  width: 150px;
+  height: 150px;
+  margin: 5%;
+  background-color: red;
+  font-size: 2em;
+  color: white;
+}
+#phone{
+  background-color: blue;
+}
