@@ -6,6 +6,7 @@ button{
   font-size: 2em;
   color: white;
 }
-#phone{
-  background-color: blue;
+.selected{
+  background-color: green;
+  font-size: 1em;
 }
