@@ -36,22 +36,26 @@ $("#phone").text( phoneNumber );
 }
 // loop through and verify untill you get a valid response.
 
+//////////
+//State//
+/////////
+
 var checkState = function (){
     var unitedStates = "AKALAZARCACOCTDEFLGAHIIDILINIAKSKYLAMEMDMAMIMNMSMOMTNENVNHNJNMNYNCNDOHOKORPARISCSDTNTXUTVTVAWAWVWIWY";
     var state = prompt("Where you from? NY? CA? CO?");
-    for (var i = 0; i < (unitedStates.length/2); i++) {
-      var test = (unitedStates.charAt(i).toString + unitedStates.charAt(i++).toString);
+    for (var i = 0; i < (unitedStates.length); i++) {
+      var test = (unitedStates.charAt(i).toString() + unitedStates.charAt(i + 1).toString());
       var stateCap = state.toUpperCase();
+      console.log(test + stateCap);
       if (test === stateCap) {
         $("#state").addClass( "selected" );
         $("#state").text( stateCap );
-      } else {
-        $("#state").text( "wrong" );
       }
     }
 
 
 }
+
 
 
 //  ------- Birthday is below here --------
