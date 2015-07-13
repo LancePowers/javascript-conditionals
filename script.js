@@ -2,20 +2,20 @@
 //Phone Number//
 ///////////////
 var checkPhone = function(){
-var phoneNumber = prompt("Can I get your digits? Make sure you throw those dashes in.");
-var dash, numOnly, nanCheck;
+  var phoneNumber = prompt("Can I get your digits? Make sure you throw those dashes in.");
+  var dash, numOnly, nanCheck;
 // get phone number and declare variables for the dashes, the numbers only, and a boolean number check
 
-var updateVar = function(){
+  var updateVar = function(){
 // function to verify 2 dashes in the right spot and all other characters are numbers
-  nanCheck = true;
-  dash = phoneNumber.charAt(3) + phoneNumber.charAt(7); //<--is there a better way of doing this?
-  numOnly = phoneNumber.substring(0,3) + phoneNumber.substring(4,7) + phoneNumber.substring(8,12);//<-- same here
+    nanCheck = true;
+    dash = phoneNumber.charAt(3) + phoneNumber.charAt(7); //<--is there a better way of doing this?
+    numOnly = phoneNumber.substring(0,3) + phoneNumber.substring(4,7) + phoneNumber.substring(8,12);//<-- same here
   //^---Is there a way to make the number of .substrings and their values into a function that could accept params for birthday or postal code?
 
-  for (var i = 0; i < numOnly.length; i++) {
-    if((isNaN (numOnly.charAt(i)))){nanCheck = false;}//<--Do I need the {} in this situation
-  }
+    for (var i = 0; i < numOnly.length; i++) {
+      if((isNaN (numOnly.charAt(i)))){nanCheck = false;}//<--Do I need the {} in this situation
+    }
 
 }
 
@@ -36,31 +36,7 @@ $("#phone").text( phoneNumber );
 }
 // loop through and verify untill you get a valid response.
 
-//////////
-//State//
-/////////
 
-var checkState = function (){
-    var unitedStates = "AKALAZARCACOCTDEFLGAHIIDILINIAKSKYLAMEMDMAMIMNMSMOMTNENVNHNJNMNYNCNDOHOKORPARISCSDTNTXUTVTVAWAWVWIWY";
-    var state = prompt("Where you from? NY? CA? CO?");
-    for (var i = 0; i < (unitedStates.length); i++) {
-      var test = (unitedStates.charAt(i).toString() + unitedStates.charAt(i + 1).toString());
-      var stateCap = state.toUpperCase();
-      console.log(test + stateCap);
-      if (test === stateCap) {
-        $("#state").addClass( "selected" );
-        $("#state").text( stateCap );
-      }
-    }
-
-
-}
-
-
-
-//  ------- Birthday is below here --------
-// I get the concept, but there's a bug. I want to see if I can get the phone script
-// to work for both before I put more time into this.
 //
 //
 // /////////////
